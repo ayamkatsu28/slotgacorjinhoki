@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JINHOKI</title>
+    <link rel="canonical" href="https://jinhoki.net/">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+    <style amp-custom>
+header,
+body {
+  background: #222;
+}
+.marquee,
+.nav-bar {
+  white-space: nowrap;
+}
+.button,
+.lihat-lebih {
+  text-decoration: none;
+}
+.article-container,
+.button,
+.center-bank,
+.header,
+.nav-item {
+  text-align: center;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: #fff;
+}
+.header {
+  padding: 10px;
+}
+.marquee {
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(to bottom,  #9e0707, #dd0e0e, #bd0000
+    );
+  color: #ffffff;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.nav-bar,
+.scroll-container {
+  overflow-x: auto;
+  display: flex;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: 10s linear infinite scroll-left;
+  font-weight: 500;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+.button {
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  color: #000;
+  margin-top: 1px;
+  margin-bottom: 2px;
+}
+.masuk {
+  background: white;
+  animation: change-color 3s infinite;
+  background-size: 400% 300%;
+  color: black;
+  border-bottom-left-radius: 10px;
+}
+.daftar {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(170deg, #9e0707, #c90000, #ff0000, #c90000, #9e0707);
+    color: white;
+  border-bottom-right-radius: 10px;
+}
+.nav-bar {
+  padding: 10px 5px;
+  background: #353535;
+  margin-bottom: 10px;
+}
+.nav-item {
+  margin: 0 8px;
+}
+.nav-item img {
+  width: 36px;
+  display: block;
+  margin: 0 auto;
+}
+.nav-item span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+h3 {
+  background-color: #0ff;
+  padding: 10px;
+  margin: 10px;
+}
+.footer-mobile {
+  background: linear-gradient(to bottom, #890707, #dd0e0e, #bd0000);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 997;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.bank,
+.bank img:first-child,
+.bank img:last-child {
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer-mobile .footer-item {
+  text-align: center;
+  padding-top: 5px;
+  margin: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-mobile .footer-item .footer-icon i {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.footer-mobile .footer-item .footer-title {
+  font-size: 12px;
+  font-weight: 300;
+}
+.center-bank {
+  color: #fff;
+  font-weight: 700;
+  margin-left: -5px;
+}
+.bank {
+  background-color: #fff;
+  padding: 0;
+  margin: 5px 0 0 7px;
+  text-align: left;
+  border-radius: 10px;
+  height: 32px;
+  width: 45%;
+  border: 3px groove;
+}
+.bank img:first-child {
+  width: 65px;
+  margin: 6px 2px auto auto;
+}
+.bank img:last-child {
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+}
+.izinketua {
+  border: 2px solid #9f0000;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+}
+.game-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.game-card {
+  text-align: center;
+  background: linear-gradient(to top, #e10a0a, #a60303, #6e0000);
+  padding: 5px;
+  border-radius: 10px;
+  min-height: 185px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.game-card img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: 150px;
+}
+
+.progress-bar {
+  height: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5px;
+  border: 1px solid yellow;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, rgb(0, 94, 0), rgb(0, 192, 0));
+  border-radius: 10px;
+  position: relative;
+}
+
+.rtp-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 13px;
+}
+
+.game-name {
+  font-weight: bold;
+  color: white;
+  font-size: 11px;
+}
+
+amp-img {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.rtp-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 996;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 1px;
+  font-size: 11px;
+}
+</style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="header">
+        <amp-img src="https://imgpics.b-cdn.net/logo/gif1.gif" width="240" height="75" alt="Logo Jinhoki"></amp-img>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <span>Selamat datang di JINHOKI - Min Depo 10.000 - Min WD 30.000</span>
+    </div>
+
+    <!-- Banner -->
+    <div class="slider">
+        <amp-img src="https://imgpics.b-cdn.net/LP/lsmenu.webp" width="600" height="600" layout="responsive" alt="Banner Jinhoki"></amp-img>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <a href="https://jinhoki.pages.dev/login" class="button masuk">Masuk</a>
+        <a href="https://jinhoki.pages.dev/login" class="button daftar">Daftar</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <div class="nav-item">
+        <amp-img src="https://ayamkatsu28.github.io/JHimg/img/pack/Slot.png" width="60" height="35" alt="Slot"></amp-img>
+        <span>Slot</span>
+        </div>
+
+        <div class="nav-item">
+        <amp-img src="https://ayamkatsu28.github.io/JHimg/img/pack/Casino.png" width="60" height="35" alt="Casino"></amp-img>
+        <span>Casino</span>
+        </div>
+
+        <div class="nav-item">
+        <amp-img src="https://ayamkatsu28.github.io/JHimg/img/pack/Sport.png" width="60" height="35" alt="Sport"></amp-img>
+        <span>Sport</span>
+        </div>
+
+         <div class="nav-item">
+        <amp-img src="https://ayamkatsu28.github.io/JHimg/img/pack/Togel.png" width="60" height="35" alt="Other"></amp-img>
+        <span>Togel</span>
+        </div>
+
+        <div class="nav-item">
+        <amp-img src="https://ayamkatsu28.github.io/JHimg/img/pack/Lottery.png" width="60" height="35" alt="Lottery"></amp-img>
+        <span>Lottery</span>
+        </div>
+
+        <div class="nav-item">
+        <amp-img src="https://ayamkatsu28.github.io/JHimg/img/pack/Fishing.png" width="60" height="35" alt="Fishing"></amp-img>
+        <span>Fishing</span>
+        </div>
+
+        <div class="nav-item">
+        <amp-img src="https://ayamkatsu28.github.io/JHimg/img/pack/Other.png" width="60" height="35" alt="Poker"></amp-img>
+        <span>Other</span>
+        </div>
+    </div>
+
+<!-- RTP -->
+    <div class="game-container">
+  <div class="game-card">
+    <amp-img src="https://imgpics.b-cdn.net/assets/MJ1.webp" width="150" height="150" layout="responsive" alt="MJ">
+      <div class="rtp-bar">RTP HARI INI</div>
+    </amp-img>
+    <div class="progress-bar">
+      <div class="progress" style="width: 93%;">
+        <div class="rtp-text">95.7%</div>
+      </div>
+    </div>
+    <div class="game-name">Mahjong Ways</div>
+  </div>
+  <div class="game-card">
+    <amp-img src="https://imgpics.b-cdn.net/assets/MJ2.webp" width="150" height="150" layout="responsive" alt="MJ2">
+      <div class="rtp-bar">RTP HARI INI</div>
+    </amp-img>
+    <div class="progress-bar">
+      <div class="progress" style="width: 90%;">
+        <div class="rtp-text">93.2%</div>
+      </div>
+    </div>
+    <div class="game-name">Mahjong Ways 2</div>
+  </div>
+  <div class="game-card">
+    <amp-img src="https://imgpics.b-cdn.net/assets/neko.webp" width="150" height="150" layout="responsive" alt="Lucky Neko">
+      <div class="rtp-bar">RTP HARI INI</div>
+    </amp-img>
+    <div class="progress-bar">
+      <div class="progress" style="width: 88%;">
+        <div class="rtp-text">91.50%</div>
+      </div>
+    </div>
+    <div class="game-name">Lucky Neko</div>
+  </div>
+</div>
+
+<div class="game-container">
+  <div class="game-card">
+    <amp-img src="https://imgpics.b-cdn.net/assets/bandito.webp" width="150" height="150" layout="responsive" alt="WB">
+      <div class="rtp-bar">RTP HARI INI</div>
+    </amp-img>
+    <div class="progress-bar">
+      <div class="progress" style="width: 85%;">
+        <div class="rtp-text">89.6%</div>
+      </div>
+    </div>
+    <div class="game-name">Wild Bandito</div>
+  </div>
+  <div class="game-card">
+    <amp-img src="https://imgpics.b-cdn.net/assets/BS.webp" width="150" height="150" layout="responsive" alt="MW">
+      <div class="rtp-bar">RTP HARI INI</div>
+    </amp-img>
+    <div class="progress-bar">
+      <div class="progress" style="width: 89%;">
+        <div class="rtp-text">90%</div>
+      </div>
+    </div>
+    <div class="game-name">Mahjong Wins 3</div>
+  </div>
+  <div class="game-card">
+    <amp-img src="https://imgpics.b-cdn.net/assets/ZEUS1000.png" width="150" height="150" layout="responsive" alt="Gates of Olympus">
+      <div class="rtp-bar">RTP HARI INI</div>
+    </amp-img>
+    <div class="progress-bar">
+      <div class="progress" style="width: 90%;">
+        <div class="rtp-text">91.6%</div>
+      </div>
+    </div>
+    <div class="game-name">Gates of Olympus</div>
+  </div>
+</div>
+
+<!-- Bank Online -->
+ <div class="izinketua">Bank Online
+                <div class="center-bank">
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/c57032ded1b000438e4a003c05b923fb.gif" alt="BCA"/>
+                        </div>
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/d5d39b2dc4717b95e43b1deea352765b.webp" alt="Mandiri"/>
+                        </div>
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/f8b73b304330505479e400b07b4ceeea.gif" alt="BRI"/>
+                        </div>
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/07cfad93a51e69a2018577ecc67b3b60.gif" alt="BNI"/>
+                        </div>
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/0637f31ea2ff4dce02d1a92914121878.gif" alt="OVO"/>
+                        </div>
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/9e4d072d0ebc5abed34b0c820122ba41.gif" alt="Gopay"/>
+                        </div>
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/0b70ede090b0603493b52ef7ab0d05b8.gif" alt="Dana"/>
+                        </div>
+                        <div style="margin-left: 5px;" class="bank">
+                            <img src="https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif" alt="Online"/>
+                            <img src="https://i.gyazo.com/44886f57ded231724a5f1b602bccd4f7.gif" alt="LinkAja"/>
+                        </div>
+                        <div style='margin-left: 5px; padding-bottom: 10px;' class='bank'>
+                            <img src='https://i.gyazo.com/6849796fef39354a83202ec3359e86c2.gif' alt='Online'>
+                            <img src='https://i.gyazo.com/643cb9e17ffb1b9177049211d033f658.png' alt='Qris'>
+                        </div>
+                    </div></div>
+
+<br><br><br><br><br>
+
+    <!-- Sticky Footer -->
+    <div class="footer-mobile">
+        <a class="footer-item" href="/">
+          <div class="footer-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="footer-title">Home</div>
+        </a>
+        <a class="footer-item" href="https://jinhoki.pages.dev/login">
+          <div class="footer-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <div class="footer-title">Daftar</div>
+        </a>
+        <a class="footer-item" href="https://jinhoki.pages.dev/login">
+          <div class="footer-icon">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="footer-title">Masuk</div>
+        </a>
+        <a class="footer-item" href="https://jinhoki.pages.dev/login">
+          <div class="footer-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="footer-title">Promosi</div>
+        </a>
+        <a class="footer-item" href="https://jinhoki.pages.dev/login">
+          <div class="footer-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="footer-title">Livechat</div>
+        </a>
+      </div>
+    
+</body>
+</html>
